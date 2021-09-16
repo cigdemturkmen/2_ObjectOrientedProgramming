@@ -14,12 +14,11 @@ namespace k1_Class
     {
         /*
          Object Oriented Programming
-        C#, java, C++, Python
+        C#, java, C++, Python gibi diller nesne tabanlı dillerdir.
 
         object(nesne)
 
-        nesne oluşturmak için > projeye sağ tıklayıp > class seçiyoruz, sınıfın adını veriyoruz.
-
+        nesne oluşturmak için > projeye sağ tıklayıp > class seçiyoruz, class adını veriyoruz.
 
          */
         public Form1()
@@ -27,32 +26,32 @@ namespace k1_Class
             InitializeComponent();
         }
 
-        private void btnOgrenciOlustur_Click(object sender, EventArgs e)
+        private void btnOgrenciOlustur_Click(object sender, EventArgs e) /*burada value'lar direkt olarak field'a atandığı için yorum satırına alındı. olması gereken property'lere atanmasıydı.*/
         {
-            //ogrenci sınıfından bir kopya olusturarak bir öğrencinin detaylı bilgisini girelim.
+        //    //Ogrenci sınıfından bir kopya olusturarak bir öğrencinin detaylı bilgisini girelim. creating an instance from Ogrenci Class.
 
-            //sınıftan bir kopya üretilmesi işlemine instance almak denir. //Ogrenci sınıfından olusturulan bir nesne.
-            Ogrenci ogr = new Ogrenci(); //Random rnd = new Random();
-            ogr._ad = "Bahar";
-            ogr._soyad = "Taşbaş";
-            ogr._bolum = "Elektrik Elektronik";
-            ogr._numara = "100";
+        //    //Class'tan bir kopya üretilmesi işlemine instance almak denir. //Ogrenci sınıfından olusturulan bir nesne.
+        //    Ogrenci ogr = new Ogrenci(); //benzer işler: Random rnd = new Random();
+        //    ogr._ad = "Bahar";
+        //    ogr._soyad = "Taşbaş";
+        //    ogr._bolum = "Elektrik Elektronik";
+        //    ogr._numara = "100";
 
-            Ogrenci ogr1 = new Ogrenci(); //sınıflardan oluşturulan değişkenlere nesne denir.
+        //    Ogrenci ogr1 = new Ogrenci(); //sınıflardan oluşturulan değişkenlere nesne denir.
 
-            ogr1._ad = "Çiğdem";
-            ogr1._soyad = "Türkmen";
-            ogr1._kanGrubu = "0 RH +";
-            ogr1._adres = "Ankara";
+        //    ogr1._ad = "Çiğdem";
+        //    ogr1._soyad = "Türkmen";
+        //    ogr1._kanGrubu = "0 RH +";
+        //    ogr1._adres = "Ankara";
  
             
-            //Ogrenci ogr2 = new Ogrenci(); fieldlar null'dır.(string default)
+        //    //Ogrenci ogr2 = new Ogrenci(); fieldlar doldurulmadığı zaman null'dır.(string defaultu null olduğu için.)
 
-            lblAd.Text = ogr._ad;
-            lblSoyad.Text = ogr._soyad;
-            lblNumarasi.Text = ogr._numara;
-            lblAdres.Text = ogr._adres;
-            lblKanGrubu.Text = ogr._kanGrubu;
+        //    lblAd.Text = ogr._ad;
+        //    lblSoyad.Text = ogr._soyad;
+        //    lblNumarasi.Text = ogr._numara;
+        //    lblAdres.Text = ogr._adres;
+        //    lblKanGrubu.Text = ogr._kanGrubu;
         }
 
         private void btnArabaEkle_Click(object sender, EventArgs e)
@@ -77,6 +76,19 @@ namespace k1_Class
             prsch9111._elektrikliMi = false;
             prsch9111._renk = "Red";
 
+            txtMarka.Text = prschCarrera1._marka;
+            txtModelAdi.Text = prschCarrera1._modelAdi;
+            txtModelYili.Text = prschCarrera1._modelYili.ToString();
+
+            txtMarka1.Text = prsch9111._marka;
+            txtModelAdi1.Text = prsch9111._modelAdi;
+            txtModelYili1.Text = prsch9111._modelYili.ToString();
+
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
         }
     }

@@ -16,7 +16,7 @@ namespace k1_Class
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new KitapKayitSayfasi());
         }
     }
 }
