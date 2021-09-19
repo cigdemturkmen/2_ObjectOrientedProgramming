@@ -58,8 +58,8 @@
             // 
             // btnOgrenciOlustur
             // 
-            this.btnOgrenciOlustur.Location = new System.Drawing.Point(79, 69);
-            this.btnOgrenciOlustur.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnOgrenciOlustur.Location = new System.Drawing.Point(103, 69);
+            this.btnOgrenciOlustur.Margin = new System.Windows.Forms.Padding(4);
             this.btnOgrenciOlustur.Name = "btnOgrenciOlustur";
             this.btnOgrenciOlustur.Size = new System.Drawing.Size(168, 28);
             this.btnOgrenciOlustur.TabIndex = 0;
@@ -190,7 +190,7 @@
             // btnArabaEkle
             // 
             this.btnArabaEkle.Location = new System.Drawing.Point(581, 69);
-            this.btnArabaEkle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnArabaEkle.Margin = new System.Windows.Forms.Padding(4);
             this.btnArabaEkle.Name = "btnArabaEkle";
             this.btnArabaEkle.Size = new System.Drawing.Size(136, 28);
             this.btnArabaEkle.TabIndex = 13;
@@ -325,7 +325,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnOgrenciOlustur);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

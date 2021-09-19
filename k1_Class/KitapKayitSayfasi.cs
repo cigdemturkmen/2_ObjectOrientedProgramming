@@ -16,31 +16,47 @@ namespace k1_Class
         {
             InitializeComponent();
         }
+        /* YENİ KANVRAMLAR
+        
+        DateTimePicker nesnesi, onun value özelliği.
+        Classlar da birer veri tipidir.
+        ComboBox SelectedItem, ComboBox SelectedIndex
+        this.Controls ile formdaki tüm elemanları foreach ile gezebiliriz.
+        foreachdeki item object türünde bir nesnedir. onu mesela şu şekilde cast ettik (TextBox)item
+
+
+        */
+
+        // Kitap adı, yazarın adı soyadı, fiyatı, türü, yayınevi, basım tarihi, sayfa sayısı bilgilerini alarak kitaplar[] içinde tutan bir uygulama yapalım.
 
         private void KitapKayitSayfasi_Load(object sender, EventArgs e)
         {
-            //ya da türler dizisi oluşturup AddRange metodu ile ekleyebiliirsin.
-            cmbTuru.Items.Add("Gerilim");
-            cmbTuru.Items.Add("Romantik");
-            cmbTuru.Items.Add("Fantastik");
-            cmbTuru.Items.Add("Macera");
+            // Bu işlemi türler dizisi oluşturup AddRange metodunu kullanarak da ekleyebilirsin.
+            cmbTuru.Items.Add("Çizgi Roman");
+            cmbTuru.Items.Add("Hikaye");
+            cmbTuru.Items.Add("Polisiye");
+            cmbTuru.Items.Add("Biyografi");
             cmbTuru.Items.Add("Roman");
+            cmbTuru.Items.Add("Kişisel Gelişim");
+            cmbTuru.Items.Add("Psikoloji");
+            cmbTuru.Items.Add("Tarih");
         }
 
         Kitap[] kitaplar = new Kitap[0];
 
         private void btnKaydet_Click(object sender, EventArgs e)
         {
-            // Kitap adı, yazar ad soyad, fiyatı, türü, yayınevi, Basım tarihi, sayfa sayısı bilgilerini alarak kitap[] içinde tutan bir uygulama yapalım.
+            Kitap kitap = new Kitap(); //kitap1, kitap2 gibi farklı instance'lara gerek yok çünkü butona her basıldığında tek bir kitap kaydolacak onun için bu kullanım yeterli.
 
-            Kitap kitap = new Kitap();
-            txtKitapAdi.Text = kitap.KitapAdi;
-            txtYayinevi.Text = kitap.Yayinevi;
-            txtFiyat.Text = kitap.Fiyat.ToString();
-            cmbTuru.SelectedItem.ToString();
-            txtYayinevi.Text = kitap.Yayinevi;
-            dtpBasimTarihi.Value = kitap.BasimTarihi;
-            txtSayfaSayisi.Text = kitap.SayfaSayisi.ToString();
+
+            kitap.KitapAdi = txtKitapAdi.Text; // atadığın değerleri sağa yaz hep! diğer türlü dtp'de hata verdi.
+            kitap.Yayinevi = txtYayinevi.Text;
+            kitap.Fiyat = Convert.ToDouble(txtFiyat.Text);
+            kitap.Turu = cmbTuru.SelectedItem.ToString();
+            kitap.Yayinevi = txtYayinevi.Text;
+            kitap.BasimTarihi = dtpBasimTarihi.Value;
+            kitap.SayfaSayisi = Convert.ToInt32(txtSayfaSayisi.Text);
+
 
             Array.Resize(ref kitaplar, kitaplar.Length + 1);
             kitaplar[kitaplar.Length - 1] = kitap;
@@ -64,12 +80,13 @@ namespace k1_Class
             {
                 if (item is TextBox)
                 {
-                    var txt = (TextBox)item;
+                    var txt = (TextBox)item; //burada item'ın türü object olduğu için onu TextBox'a cast ettik.
                     txt.Clear();
                 }
             }
 
             cmbTuru.SelectedIndex = -1;
+
             dtpBasimTarihi.Value = DateTime.Now;
         }
 
@@ -90,8 +107,8 @@ namespace k1_Class
 
         private void lstKitaplar_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //CRUD; CLEAN READ UPDATE 
-            var secilenEleman = (Kitap)lstKitaplar.SelectedItem; //cast ettik
+            //CRUD;  CREATE READ UPDATE CLEAN
+            var secilenEleman = (Kitap)lstKitaplar.SelectedItem; //cast ettik çünkü listbox'ın elemanları object türündedir.
 
             txtKitapAdi.Text = secilenEleman.KitapAdi;
             txtYazarAdi.Text = secilenEleman.Yazar;

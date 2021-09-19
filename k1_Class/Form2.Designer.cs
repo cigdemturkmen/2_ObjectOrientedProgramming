@@ -30,7 +30,7 @@ namespace k1_Class
         private void InitializeComponent()
         {
             this.btnOgrenciEkle = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtYas = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnOgrenciEkle
@@ -43,22 +43,23 @@ namespace k1_Class
             this.btnOgrenciEkle.UseVisualStyleBackColor = true;
             this.btnOgrenciEkle.Click += new System.EventHandler(this.btnOgrenciEkle_Click);
             // 
-            // textBox1
+            // txtYas
             // 
-            this.textBox1.Location = new System.Drawing.Point(24, 29);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(152, 22);
-            this.textBox1.TabIndex = 1;
+            this.txtYas.Location = new System.Drawing.Point(24, 29);
+            this.txtYas.Name = "txtYas";
+            this.txtYas.Size = new System.Drawing.Size(152, 22);
+            this.txtYas.TabIndex = 1;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtYas);
             this.Controls.Add(this.btnOgrenciEkle);
             this.Name = "Form2";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -67,6 +68,6 @@ namespace k1_Class
         #endregion
 
         private System.Windows.Forms.Button btnOgrenciEkle;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtYas;
     }
 }

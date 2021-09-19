@@ -16,7 +16,10 @@ namespace k1_Class
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new KitapKayitSayfasi());
+            //Application.Run(new Form1());
+            //Application.Run(new Form2());
+            //Application.Run(new KitapKayitSayfasi());
+            Application.Run(new OgrenciKayit());
         }
     }
 }

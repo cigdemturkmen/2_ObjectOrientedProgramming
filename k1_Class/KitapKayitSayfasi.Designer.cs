@@ -184,7 +184,7 @@ namespace k1_Class
             // 
             // btnKitaplarıListele
             // 
-            this.btnKitaplarıListele.Location = new System.Drawing.Point(629, 173);
+            this.btnKitaplarıListele.Location = new System.Drawing.Point(460, 12);
             this.btnKitaplarıListele.Name = "btnKitaplarıListele";
             this.btnKitaplarıListele.Size = new System.Drawing.Size(213, 28);
             this.btnKitaplarıListele.TabIndex = 16;
@@ -196,9 +196,9 @@ namespace k1_Class
             // 
             this.lstKitaplar.FormattingEnabled = true;
             this.lstKitaplar.ItemHeight = 16;
-            this.lstKitaplar.Location = new System.Drawing.Point(629, 223);
+            this.lstKitaplar.Location = new System.Drawing.Point(460, 51);
             this.lstKitaplar.Name = "lstKitaplar";
-            this.lstKitaplar.Size = new System.Drawing.Size(331, 228);
+            this.lstKitaplar.Size = new System.Drawing.Size(331, 308);
             this.lstKitaplar.TabIndex = 17;
             this.lstKitaplar.SelectedIndexChanged += new System.EventHandler(this.lstKitaplar_SelectedIndexChanged);
             // 
@@ -206,7 +206,7 @@ namespace k1_Class
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1015, 524);
+            this.ClientSize = new System.Drawing.Size(1015, 744);
             this.Controls.Add(this.lstKitaplar);
             this.Controls.Add(this.btnKitaplarıListele);
             this.Controls.Add(this.btnTemizle);

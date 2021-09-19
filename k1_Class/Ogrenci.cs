@@ -1,19 +1,20 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace k1_Class //hangi projede yer alıyorsa onun ismi geliyor.
+namespace k1_Class // Proje ismi
 {
-    class Ogrenci //sınıflar PascalCase notasyonu ile isimlendirme yapılır
+    class Ogrenci // Sınıflarda PascalCase notasyonu ile isimlendirme yapılır.
     {
-        //sınıfın içinde veri tutmak için oluşturulan değişkenlere field ismi verilir.
-        //field'lar isimlendirilirken değişken isimlendirme kuralları geçerlidir. tek fark değişken ismi önünde _ bulunur.
-        //_ olması program açısından bir fark yaratmaz, değişken olarak görecektir.
-        //sınıflar birer şablondur
-        //sınıf içinde tanımlanan elemanların erişim belirleyicisi özellikle belirtilmemişse default olarak private algılanır.
-        //aşağıdaki stringler birer field'dır.
+        // Sınıfın içinde veri tutmak için oluşturulan değişkenlere field ismi verilir.
+        // Field'lar isimlendirilirken değişken isimlendirme kuralları geçerlidir. Tek fark değişken ismi önünde _(underscore) bulunur.
+        // _ olması program açısından bir fark yaratmaz, yine değişken olarak görecektir.
+        // Sınıflar birer şablondur. Bu şablonlardan instance alınır.
+        // Sınıf içinde tanımlanan elemanların erişim belirleyicisi özellikle belirtilmemişse default olarak private algılanır.
+        // Aşağıdaki stringler birer field'dır. (public keywordü ile yazıldıkları için daha sonra yorum satırına alındı)
 
         //public string _ad;
 
@@ -27,17 +28,19 @@ namespace k1_Class //hangi projede yer alıyorsa onun ismi geliyor.
 
         //public string _bolum;
 
-        private string _ad; //Fied asıl veriyi tutan değişken
+        //Yukarıda yorum satırı olan alanda field'ları public oluşturmuştuk. Şimdi ise field'ları private yapıp public property'ler kullanacağz.
+
+        private string _ad; //Fied asıl veriyi tutan değişkendir; propertyler veri tutmaz!
         public string Ad
         {
             get
             {
-                //dışarıdan fieldın değeri istendiği zaman buradan gönderim işlemi yapılır
+                // Dışarıdan field'ın değeri istendiği zaman buradan gönderim işlemi yapılır.
                 return _ad;
             }
             set
             {
-                //dışarıdan alınan verinin kontrol edilerek fielda atanması işlemi burada yapılır, value
+                // Dışarıdan alınan verinin kontrol edilerek field'a atanması işlemi burada yapılır, alınan veri "value" olarak gösterilir.
                 _ad = value;
             }
         }
@@ -99,8 +102,7 @@ namespace k1_Class //hangi projede yer alıyorsa onun ismi geliyor.
         //        _yas = value;
         //    }
         //}
-
-        public int Yas
+        public int Yas //
         {
             get 
             {
@@ -109,19 +111,23 @@ namespace k1_Class //hangi projede yer alıyorsa onun ismi geliyor.
                 _yas = fark.Days /365 ;
                 return _yas;
             }
+            //set
+            //{
+            //    _yas = Convert.ToInt32(DateTime.Now - _dogumTarihi);
+            //}
         }
         private DateTime _dogumTarihi;
         public DateTime DogumTarihi
         {
             get { return _dogumTarihi; }
-            set { _dogumTarihi = value; }//dışarıdan alınmak zorunda değil
+            set { _dogumTarihi = value; }/*Yas property'si dışarıdan alınmak zorunda değil. Yani Yas property'sinin set özelliği olmak zorunda değil. Bunun yerine Yas özelliğinin içinde return edeceği değeri hesaplattırabiliriz.(DogumTarihinin set'inden gelen veri ile bunu hesaplattırabiliriz). Ya get'in içinde ya da set'in içinde hesaplatabiliriz. set'tekini yorum satırına aldım.*/
         }
 
-        //OOP'İn encapsulation kuralı doğrusunda field'lar sınıf içinde private olarak tanımlanmalıdır.
-        //property ile field'lara değerleri kontrollü bir şekilde aktarabiliriz veya field'ın taşıdığı değeri kullanıcıya gönderebiliriz.
-        //property'de erişim belirleyicisi public olmalıdır!
-        //field ile aynı veri tipinde tanımlanır(aynı tipte tanımlanırsa iyi olur)
-        //property isimlendirme kuralında PascalCase notasyonu kullanılır
+        // OOP'in encapsulation kuralı doğrusunda field'lar sınıf içinde private olarak tanımlanmalıdır.
+        // Property ile field'lara kontrollü bir şekilde değerleri aktarabiliriz(set) veya field'ın taşıdığı değeri kullanıcıya gönderebiliriz(get).
+        // Property'de erişim belirleyicisi public olmalıdır!
+        // Property, field ile aynı veri tipinde tanımlanır(aynı tipte tanımlanırsa iyi olur?)
+        // Property isimlendirme kuralında PascalCase notasyonu kullanılır.
     }
 
     class Araba //Bu class encapsulation kuralına uygun yazılmamıştır.(because fields are public; not encapsulated)
