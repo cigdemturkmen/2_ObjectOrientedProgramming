@@ -18,8 +18,8 @@ namespace k1_Class
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Form1());
             //Application.Run(new Form2());
-            //Application.Run(new KitapKayitSayfasi());
-            Application.Run(new OgrenciKayit());
+            Application.Run(new KitapKayitSayfasi());
+            //Application.Run(new OgrenciKayit());
         }
     }
 }

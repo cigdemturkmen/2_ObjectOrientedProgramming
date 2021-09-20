@@ -18,12 +18,17 @@ namespace k1_Class
         }
         /* YENİ KANVRAMLAR
         
-        DateTimePicker nesnesi, onun value özelliği.
-        Classlar da birer veri tipidir.
-        ComboBox SelectedItem, ComboBox SelectedIndex
-        this.Controls ile formdaki tüm elemanları foreach ile gezebiliriz.
-        foreachdeki item object türünde bir nesnedir. onu mesela şu şekilde cast ettik (TextBox)item
-
+        -DateTimePicker nesnesi ve onun Value özelliği.
+        -Classlar da birer veri tipidir.
+        -ComboBox SelectedItem, ComboBox SelectedIndex
+        -this.Controls ile formdaki tüm elemanları foreach ile gezebiliriz.
+        -foreachdeki item object türünde bir nesnedir. onu mesela şu şekilde cast ettik (TextBox)item
+        -ComboBox'ın SelectedIndexChanged event'i.
+        -ListBox'ın SelectedIndexChnaged event'i
+        -is keywordü > örnek: if(item is Textbox)
+        -Formdaki tüm nesnelerin TabIndex özelliği. tab tab yaparak giderken hangi sırayı izleyeceği...
+        -ComboBox'ın AutoCompleteMode ve AutoCompleteSource özelliği. sırasıyla Suggest ve ListItems seçenekleri güzel...
+        -Combobox'ın DropDownStyle özelliğinde DropDownList seçilirse, kullanıcı kendisi yeni bir şey yazamaz.
 
         */
 
@@ -57,19 +62,18 @@ namespace k1_Class
             kitap.BasimTarihi = dtpBasimTarihi.Value;
             kitap.SayfaSayisi = Convert.ToInt32(txtSayfaSayisi.Text);
 
-
             Array.Resize(ref kitaplar, kitaplar.Length + 1);
             kitaplar[kitaplar.Length - 1] = kitap;
 
             MessageBox.Show("Kitap başarıyla kaydedilmiştir.");
 
             FormuTemizle();
-        }
-
-        /*kaydetme işlemi tamamlandıktan sonra ya da temizleme butonuna basıldığında textbox, combobox, datepicker'ı temizleyecek bir metot yazın.*/
+        } 
 
         private void FormuTemizle()
         {
+            /*kaydetme işlemi tamamlandıktan sonra ya da temizleme butonuna basıldığında textbox, combobox, datepicker'ı temizleyecek bir metot*/
+
             //txtKitapAdi.Clear();
             //txtYazarAdi.Clear();
             //txtYayinevi.Clear();
@@ -95,12 +99,13 @@ namespace k1_Class
             FormuTemizle();
         }
 
-        //kitap[] içindekileri listbox'a ekleyelim.
+        
         private void btnKitaplarıListele_Click(object sender, EventArgs e)
         {
+            //kitap[] içindekileri listbox'a ekleyelim.
             foreach (var item in kitaplar)
             {
-                lstKitaplar.Items.Add(item);
+                lstKitaplar.Items.Add(item);//????BU KOD NASIL EZDİĞİMİZ STRİNG() METODUNU ÇALIŞTIRIYOR Kİ? metodu çağırmadık?
                 //lstKitaplar.Items.Add(kitap.KitapAdi);
             }
         }
@@ -119,6 +124,6 @@ namespace k1_Class
             cmbTuru.SelectedItem = secilenEleman.ToString();
         }
 
-        // Ödev: Ögrenci kayıt ekranı oluştur. Ödevlerinizi rabianur@outlook.com adresine zip olarak mail atınız.
+        // Ödev: Ögrenci kayıt ekranı oluştur. Ödevlerinizi rabianur@outlook.com adresine zip olarak mail atınız. DONE!
     }
 }

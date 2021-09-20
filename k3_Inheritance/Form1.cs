@@ -14,14 +14,19 @@ namespace k3_Inheritance
     {
         /*
          * Biyolojideki türlerin sınıflandırılması ve kalıtım vermesi gibi düşünebilirsiniz.
-         * Base Sınıf: Kalıtım veren en üstteki sınıftır.
-         * Derived Sınıf: Kalıtım alan, türetilmiş sınıftır.
-         * Amaç: tekrar tekrar property, metot vb. elemanların tanımlanmasını önlemektir. 
+         * Base Sınıf: Kalıtım veren en üstteki sınıftır. Ebeveyn gibi düşün.
+         * Derived Sınıf: Kalıtım alan, türetilmiş sınıftır. Ebeveynin çocuğu gibi düşün.
+         * Amaç: tekrar tekrar property, metot vb. aynı elemanların tanımlanmasını önlemektir. 
          
          */
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            //TODO burada oluşturduğun sınıfların kullanım denemelerini yap sonra.
         }
     }
 }

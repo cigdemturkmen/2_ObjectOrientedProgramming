@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace k3_Inheritance
 {
-    class Memur
+    class Memur : Insan
     {
+        public string SicilNo { get; set; }
+        public DateTime IseBaslamaTarihi { get; set; }
     }
 }

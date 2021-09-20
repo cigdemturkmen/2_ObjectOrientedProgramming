@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace k3_Inheritance
 {
-    class OkulPersoneli
+    class OkulPersoneli :Memur
     {
 
     }

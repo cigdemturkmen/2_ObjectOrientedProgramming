@@ -16,7 +16,6 @@ namespace k1_Class
         int _sayfaSayisi;
         DateTime _basimTarihi;
 
-
         public string KitapAdi
         {
             get { return _kitapAdi; }
@@ -41,8 +40,7 @@ namespace k1_Class
         {
             get { return _yayinevi; }
             set { _yayinevi = value; }
-        }
-        
+        } 
         public DateTime BasimTarihi
         {
             get { return _basimTarihi; }
@@ -53,8 +51,6 @@ namespace k1_Class
             get { return _sayfaSayisi; }
             set { _sayfaSayisi = value; }
         }
-
-
 
         public override string ToString() // ToString virtual bir metod olduğu için onu ezdik ve return base.ToString(); olan kodu return.this.KitapAdi; olarak değiştirdik.
         {

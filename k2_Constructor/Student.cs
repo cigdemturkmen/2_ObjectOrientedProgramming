@@ -8,7 +8,9 @@ namespace k2_Constructor
 {
     class Student
     {
-        #region Constructor //public oluşturulur.
+        #region Constructor
+        //public oluşturulur! Constructor metodu bir classtan instance alırken kullanılır(çağırılır).Random rnd = new Random();
+
         public Student()
         {
             //tanımlanmazsa, arkada otomatik olarak tanımlanır zaten. buraya ogrencinin default özellikleri de yazılabilir.
@@ -16,7 +18,7 @@ namespace k2_Constructor
 
         public Student(string name, string surname, string tcnk)
         {
-            this.Name = name;
+            this.Name = name; //buradaki parametreler yeni oluşturulan bir instance'ın property'leri olacak.
             this.Surname = surname;
             this.TCKN = tcnk;
         }
@@ -24,7 +26,16 @@ namespace k2_Constructor
 
         #region Properties
 
-        public string Name { get; set; } //_name field'ı arkada otomatik oluşturulur. Bu gösterimin açık hali şu şekildeydi;TODO
+        //private string _name;
+        //public string Name
+        //{
+        //    get { return _name; }
+        //    set { _name = value; }
+        //}
+
+        //Yukarıdaki gösterimin kapalı hali şu şekildedir:
+
+        public string Name { get; set; } //_name field'ı arkada otomatik oluşturulur bu gösterimde. Artık bunu kullan.
 
         public string Surname { get; set; }
 

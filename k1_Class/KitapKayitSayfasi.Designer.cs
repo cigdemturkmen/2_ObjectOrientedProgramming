@@ -138,6 +138,9 @@ namespace k1_Class
             // 
             // cmbTuru
             // 
+            this.cmbTuru.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cmbTuru.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbTuru.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTuru.FormattingEnabled = true;
             this.cmbTuru.Location = new System.Drawing.Point(122, 134);
             this.cmbTuru.Name = "cmbTuru";

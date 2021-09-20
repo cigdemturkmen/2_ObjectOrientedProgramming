@@ -6,11 +6,16 @@ using System.Threading.Tasks;
 
 namespace k3_Inheritance
 {
-    class Ogretmen : Insan
+    class Ogretmen : Memur
     {
-        public string SicilNo { get; set; }
-        public DateTime IseBaslamaTarihi { get; date; }
+        
         public string Brans { get; set; }
+        public string DiplomaNo { get; set; }
         public string MezunOlduguOkul { get; set; }
+
+        public void YaziliYap()
+        {
+            //
+        }
     }
 }
