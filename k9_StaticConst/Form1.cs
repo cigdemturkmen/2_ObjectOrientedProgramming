@@ -36,6 +36,8 @@ namespace k9_StaticConst
             var eulerSabiti = Matematik.EulerSabiti;
 
             //helper
+            //utilities
+            
         }
     }
 }
