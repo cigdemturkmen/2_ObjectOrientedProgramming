@@ -8,9 +8,9 @@ namespace k4_AccessModifiers
 {
     class Televizyon : ElektronikUrun
     {
-        public Double GerilimiDusur()
+        public double GerilimiDusur()
         {
-            /*base sınıfta protected olarak tanımlanmış olan Gerilimdegeri property'sini burada kullanabiliyoruz. Televizyondan oluşturulan bir instancete'da görünmez eğer başka bir sınıf içinde oluşturulduysa bu instance.*/
+            /*base sınıfta protected olarak tanımlanmış olan Gerilimdegeri property'sini burada kullanabiliyoruz. Televizyondan oluşturulan bir instance'da görünmez EĞER başka bir sınıf içinde oluşturulduysa bu instance.*/
             return GerilimDegeri / 10;
         }
 

@@ -42,24 +42,27 @@
             // 
             // txtAd
             // 
-            this.txtAd.Location = new System.Drawing.Point(102, 58);
+            this.txtAd.Location = new System.Drawing.Point(136, 71);
+            this.txtAd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtAd.Name = "txtAd";
-            this.txtAd.Size = new System.Drawing.Size(100, 20);
+            this.txtAd.Size = new System.Drawing.Size(132, 22);
             this.txtAd.TabIndex = 0;
             // 
             // txtSoyad
             // 
-            this.txtSoyad.Location = new System.Drawing.Point(102, 95);
+            this.txtSoyad.Location = new System.Drawing.Point(136, 131);
+            this.txtSoyad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSoyad.Name = "txtSoyad";
-            this.txtSoyad.Size = new System.Drawing.Size(100, 20);
+            this.txtSoyad.Size = new System.Drawing.Size(132, 22);
             this.txtSoyad.TabIndex = 1;
             // 
             // rdbKadin
             // 
             this.rdbKadin.AutoSize = true;
-            this.rdbKadin.Location = new System.Drawing.Point(102, 233);
+            this.rdbKadin.Location = new System.Drawing.Point(512, 194);
+            this.rdbKadin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rdbKadin.Name = "rdbKadin";
-            this.rdbKadin.Size = new System.Drawing.Size(52, 17);
+            this.rdbKadin.Size = new System.Drawing.Size(65, 21);
             this.rdbKadin.TabIndex = 2;
             this.rdbKadin.TabStop = true;
             this.rdbKadin.Text = "Kadin";
@@ -68,9 +71,10 @@
             // rdbErkek
             // 
             this.rdbErkek.AutoSize = true;
-            this.rdbErkek.Location = new System.Drawing.Point(204, 233);
+            this.rdbErkek.Location = new System.Drawing.Point(585, 194);
+            this.rdbErkek.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rdbErkek.Name = "rdbErkek";
-            this.rdbErkek.Size = new System.Drawing.Size(53, 17);
+            this.rdbErkek.Size = new System.Drawing.Size(65, 21);
             this.rdbErkek.TabIndex = 3;
             this.rdbErkek.TabStop = true;
             this.rdbErkek.Text = "Erkek";
@@ -79,26 +83,29 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(46, 65);
+            this.label1.Location = new System.Drawing.Point(75, 74);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(25, 17);
             this.label1.TabIndex = 4;
-            this.label1.Text = "label1";
+            this.label1.Text = "Ad";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(46, 102);
+            this.label2.Location = new System.Drawing.Point(52, 134);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.Size = new System.Drawing.Size(48, 17);
             this.label2.TabIndex = 5;
-            this.label2.Text = "label2";
+            this.label2.Text = "Soyad";
             // 
             // btnKaydet
             // 
-            this.btnKaydet.Location = new System.Drawing.Point(102, 199);
+            this.btnKaydet.Location = new System.Drawing.Point(136, 245);
+            this.btnKaydet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnKaydet.Name = "btnKaydet";
-            this.btnKaydet.Size = new System.Drawing.Size(75, 23);
+            this.btnKaydet.Size = new System.Drawing.Size(100, 28);
             this.btnKaydet.TabIndex = 6;
             this.btnKaydet.Text = "Kaydet";
             this.btnKaydet.UseVisualStyleBackColor = true;
@@ -106,19 +113,21 @@
             // 
             // txtCinsiyet
             // 
-            this.txtCinsiyet.Location = new System.Drawing.Point(102, 155);
+            this.txtCinsiyet.Location = new System.Drawing.Point(136, 191);
+            this.txtCinsiyet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCinsiyet.Name = "txtCinsiyet";
-            this.txtCinsiyet.Size = new System.Drawing.Size(100, 20);
+            this.txtCinsiyet.Size = new System.Drawing.Size(132, 22);
             this.txtCinsiyet.TabIndex = 7;
             // 
             // lbl
             // 
             this.lbl.AutoSize = true;
-            this.lbl.Location = new System.Drawing.Point(46, 162);
+            this.lbl.Location = new System.Drawing.Point(43, 194);
+            this.lbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(35, 13);
+            this.lbl.Size = new System.Drawing.Size(57, 17);
             this.lbl.TabIndex = 8;
-            this.lbl.Text = "label3";
+            this.lbl.Text = "Cinsiyet";
             // 
             // cmbCinsiyet
             // 
@@ -126,16 +135,17 @@
             this.cmbCinsiyet.Items.AddRange(new object[] {
             "Kadın",
             "Erkek"});
-            this.cmbCinsiyet.Location = new System.Drawing.Point(255, 155);
+            this.cmbCinsiyet.Location = new System.Drawing.Point(309, 191);
+            this.cmbCinsiyet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbCinsiyet.Name = "cmbCinsiyet";
-            this.cmbCinsiyet.Size = new System.Drawing.Size(121, 21);
+            this.cmbCinsiyet.Size = new System.Drawing.Size(160, 24);
             this.cmbCinsiyet.TabIndex = 9;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.cmbCinsiyet);
             this.Controls.Add(this.lbl);
             this.Controls.Add(this.txtCinsiyet);
@@ -146,6 +156,7 @@
             this.Controls.Add(this.rdbKadin);
             this.Controls.Add(this.txtSoyad);
             this.Controls.Add(this.txtAd);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

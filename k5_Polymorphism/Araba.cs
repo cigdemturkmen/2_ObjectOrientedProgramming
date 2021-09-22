@@ -13,7 +13,7 @@ namespace k5_Polymorphism
 
         public int MotorHacmi { get; set; }
 
-        public override double KdvliFiyatGetir()
+        public override double KdvliFiyatGetir() //override diyerek metodu ezdik.
         {
             //Motor hacmine göre farklı KDV oranları getiren metot yaz.
             //1000-2000 -> %45, 2000-2500 -> %150, 2500-2500 üzeri -> %300

@@ -11,7 +11,7 @@ namespace k6_Abstraction
         public int RamBoyutu { get; set; }
         public int HarddsiskBoyutu { get; set; }
 
-        public override double KdvHesapla()
+        public override double KdvDahilFiyatHesapla()
         {
             return Fiyat * 1.12;
         }

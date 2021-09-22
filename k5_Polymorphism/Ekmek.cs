@@ -10,7 +10,7 @@ namespace k5_Polymorphism
     {
         public string EkmekTuru { get; set; }
         
-        public override double KdvliFiyatGetir()
+        public override double KdvliFiyatGetir() //metodu override anahtar kelimesini kullanarak ezdik.
         {
             double kdvOrani = 0;
             if (EkmekTuru == "beyaz ekmek")

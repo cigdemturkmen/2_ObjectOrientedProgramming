@@ -24,26 +24,28 @@ namespace k7_Enum
         private void Form1_Load(object sender, EventArgs e)
         {
             //konu anlatımı
-            //Cinsiyet.Erkek
+            //Cinsiyet.Erkek (enum.içindekiDeğer)
 
-            var yazi = Cinsiyet.Kadin.ToString(); //Kadin - string kısmını istiyorum
-            var sayisalKismi = (int)Cinsiyet.Erkek; //1 - sayısal kısmı istiyorum
-            //var s = Convert.ToInt32(Cinsiyet.Erkek); //bu kullanım kullanılmıyor
+            var yazi = Cinsiyet.Kadin.ToString(); //Kadin : string kısmını istiyorum
+            var sayisalKismi = (int)Cinsiyet.Erkek; //1 : sayısal kısmı istiyorum
+            //var s = Convert.ToInt32(Cinsiyet.Erkek); //Bu kullanım kullanılmıyor!
         }
 
         private void btnKaydet_Click(object sender, EventArgs e)
         {
             Kullanıcı k1 = new Kullanıcı();
 
-            var ad = txtAd;
+            var ad = txtAd.Text;
 
-            var soyad = txtSoyad;
+            var soyad = txtSoyad.Text;
 
-            //var cinsiyet = txtCinsiyet.Text; //jfhsaasdas
+            //textbox ile seçim:
+            //var cinsiyet = txtCinsiyet.Text; //jfhsaasdas textboxla aldırırsak böyle bir sorunla karşılaşabiliriz.
 
-            var cinsiyet = cmbCinsiyet.SelectedItem.ToString(); //kadın/erkek
+            //combobox ile seçim:
+            var cinsiyet = cmbCinsiyet.SelectedItem.ToString(); /*burada da programcı yanlışlıkla kadın-erkek dışında bir string girebilir. çünkü Kullanıcı.cs'de Cinsiyet property'si string tipinde! Böyle bir şeyin önüne geçmek için veri tipini Cinsiyet yapabiliriz. Cinsiyet enum'ını tanımladıktan sonra tabi ki!*/
 
-            //radiobox ile seçim
+            //radiobox ile seçim:
             //if (rdbKadin.Checked)
             //{
             //    k1.Cinsiyet = Cinsiyet.Kadin;
@@ -53,10 +55,9 @@ namespace k7_Enum
             //    k1.Cinsiyet = Cinsiyet.Erkek;
             //}
 
-
             k1.Ad = ad;
             k1.Soyad = soyad;
-            k1.Cinsiyet = Cinsiyet.Kadin;
+            //k1.Cinsiyet = 0;
 
 
         }

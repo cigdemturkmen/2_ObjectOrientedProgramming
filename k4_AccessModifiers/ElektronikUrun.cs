@@ -8,10 +8,10 @@ namespace k4_AccessModifiers
 {
     class ElektronikUrun
     {
-        protected double GerilimDegeri { get; set; } = 100;//sadece çocukları göreblir. //private olursa çocuğu da göremez.
+        protected double GerilimDegeri { get; set; } = 100;//sadece çocukları erişebilir. //private olursa çocuğu da göremez.
         protected double Direnc { get; set; }
         public double Sicaklık { get; set; }
-        double TuketilenGuc { get; set; }
+        double TuketilenGuc { get; set; } // default olarak private.
 
         void KwHesaplama()
         {

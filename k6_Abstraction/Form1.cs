@@ -22,12 +22,18 @@ namespace k6_Abstraction
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            //Urun u1 = new Urun(); //urun diye bir şey aslında yok. Ondan instance almak saçma.
             //base sınıftan engellenmediği için instance oluşturabildik. base'i abstract'a çevirince aşağıdaki kod hata verdi. base'den instance alınmasının böylece önüne geçildi.
-            //Urun u1 = new Urun(); //urun diye bir şey aslında yok. 
-            //u1.Fiyat = 11;
+
+            //u1.Fiyat = 11; //hata verdi çünkü u1 abstract bir sınıftan alınan bir instance olduğu için.
 
             Telefon t1 = new Telefon();
-            t1.Fiyat = 
+            t1.Fiyat = 1200;
+            var telefonSatisFiyati = t1.KdvDahilFiyatHesapla(); //override ile ezilmiş metotları çağırmak için başına instance'ını yazıyoruz(t1.)
+
+            Bilgisayar b1 = new Bilgisayar();
+            b1.Fiyat = 10000;
+            var bilgisayarSatisFiyati = b1.KdvDahilFiyatHesapla();
         }
     }
 }

@@ -11,6 +11,6 @@ namespace k7_Enum
         public string Ad { get; set; }
         public string Soyad { get; set; }
         //public string Cinsiyet { get; set; }
-        public Cinsiyet Cinsiyet { get; set; } //buradaki ilk cinsiyet veri tipi: Cinsiyet(bu bir enum)
+        public Cinsiyet Cinsiyet { get; set; } //buradaki ilk Cinsiyet kelimesi, veri tipini gösteriyor: Cinsiyet(bu bir enum)
     }
 }

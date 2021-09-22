@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace k4_AccessModifiers
-{//Projelere ayırarak kod yazmaya katmanlı mimari denir. OBD.UI, OBS.DATA, OBS.BLL (OBS:öğr bil sist örneği)
+{//Projelere ayırarak kod yazmaya katmanlı mimari denir. (Örnek: OBS - öğrenci bilgi sistemi) OBS.UI, OBS.DATA, OBS.BLL 
     public partial class Form1 : Form
     {
         /*
@@ -26,16 +26,15 @@ namespace k4_AccessModifiers
 
          * 4.protected internal: hem protected'in hem internal'ın özelliklerini gösterir.(yani, kendi projesinde her yerden ve inheritance verdiği sınıfların içinden ulaşılabilir.)
 
-         * 5.private: class'lara private yazamasınız. eğer class elemanlarına erişim belirleyici vermezseniz default olarak private davranır ve sadece o sınıf içinden erişilebilir olur.
+         * 5.private: (Sadece kendi sınıfı içinden) class elemanlarına erişim belirleyici vermezseniz default olarak private davranır ve sadece o sınıf içinden erişilebilir olur. Class'lara private yazamasınız. 
 
-         * Bir projeye başka bir projeyi referans veriyorsak sürümleri eşleşmelidir. eğer referanslar kısmında sarı bir ünlem görüyorsak bu sürümlerin eşleşmediğini gösterir. ikisini eşitlersek sorun düzelir.
+         * Bir projeye başka bir projeyi referans veriyorsak sürümleri eşleşmelidir. eğer referanslar kısmında sarı bir ünlem görüyorsak bu sürümlerinin eşleşmediğini gösterir. ikisini eşitlersek sorun düzelir. Burada biz OBS.Data projesini kullanmak için onu referanslara ekledik. Yukarıdaki using kodlarına da ekledik.
          
          !!!Classların başına sadece public veya internal gelebilir!!! Bir şey yazılmazsa default olarak internal olur.
          */
         public Form1()
         {
-            InitializeComponent();
-            
+            InitializeComponent();          
         }
     }
 }

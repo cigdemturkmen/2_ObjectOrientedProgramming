@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace k6_Abstraction
 {
-    
     class Telefon : Urun
     {
         public string EkranBoyutu { get; set; }
 
-        public override double KdvHesapla()
+        public override double KdvDahilFiyatHesapla()
         {
             return Fiyat * 1.08;
         }

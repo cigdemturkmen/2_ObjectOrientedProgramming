@@ -13,7 +13,7 @@ namespace k5_Polymorphism
     public partial class Form1 : Form
     {
         /* 
-        Çok biçimlilik(polymorphism):  base sınıfta yazılan bir metot ya da property'nin derived sınıflarda base'de tanımlandığından farklı bir şekilde kullanılmasına denir.
+        Çok Biçimlilik(polymorphism):  Base sınıfta yazılan bir metot ya da property'nin derived sınıflarda base'de tanımlandığından farklı bir şekilde kullanılmasına denir.
         virtual anahtar kelimesi ile tanımlanan eleman, miras alınan sınıf içinde override anahtar kelimesi ile ezilebilir ve farklı bir biçimde kullanılabilir.
         */
         public Form1()
